@@ -1,0 +1,61 @@
+<section class="weekly-picks">
+  <h2>picks of the week</h2>
+  <div>
+    <div class="weekly-picks__item">
+      <a href="{{ all_products['plaid-blazer'].url }}" class="weekly-picks__item-link">
+        <div class="weekly-picks__bubble--sale">
+          <span>sale</span>
+        </div>
+        <div class="weekly-picks__img-wrapper">
+          <img style="width: 120%; max-width: unset" src="{{ all_products['plaid-blazer'].images[0].src | img_url: "Medium" }}" />
+        </div>
+        <p>{{ all_products['plaid-blazer'].title }}</p>
+        <span>{{ all_products['plaid-blazer'].price | money }}</span>
+        <span>{{ all_products['plaid-blazer'].compare_at_price | money }}</span>
+      </a>
+    </div>
+    <div class="weekly-picks__item">
+      <a href="{{ all_products['mod-patterned-minidress'].url }}" class="weekly-picks__item-link">
+        <div class="weekly-picks__bubble--new">
+          <span>new in</span>
+        </div>
+        <div class="weekly-picks__img-wrapper">
+          <img src="{{ all_products['mod-patterned-minidress'].images[0].src | img_url: "Medium" }}"" />
+        </div>
+        <p>{{ all_products['mod-patterned-minidress'].title }}</p>
+        <p>{{ all_products['mod-patterned-minidress'].price | money }}</p>
+      </a>
+    </div>
+    <div class="weekly-picks__item">
+      <a href="{{ all_products['oversized-denim-jacket'].url }}" class="weekly-picks__item-link">
+        <div class="weekly-picks__bubble--fave">
+          <span>staff<br>fave</span>
+        </div>
+        <div class="weekly-picks__img-wrapper">
+          <img src="{{ all_products['oversized-denim-jacket'].images[0].src | img_url: "Medium" }}"" />
+        </div>
+        <p>{{ all_products['oversized-denim-jacket'].title }}</p>
+        <p>{{ all_products['oversized-denim-jacket'].price | money }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero collections",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Collections"
+    }
+  ]
+}
+{% endschema %}

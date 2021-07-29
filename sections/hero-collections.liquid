@@ -1,0 +1,88 @@
+{% style %}
+.collection-card-denim--bg,
+.collection-card-beach--bg,
+.collection-card-work--bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%,-50%);
+}
+
+.collection-card-denim--bg {
+  background-image: url({{ 'hero-denim.png' | asset_img_url: 'Medium' }});
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.collection-card:hover > .collection-card-denim--bg {
+  opacity: 0;
+  transition: none;
+}
+
+.collection-card-beach--bg {
+  background-image: url({{ 'hero-beach.png' | asset_img_url: 'Medium' }});
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.collection-card:hover > .collection-card-beach--bg {
+  opacity: 0;
+  transition: none;
+}
+
+.collection-card-work--bg {
+  background-image: url({{ 'hero-work.png' | asset_img_url: 'Medium' }});
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.collection-card:hover > .collection-card-work--bg {
+  opacity: 0;
+  transition: none;
+}
+{% endstyle %}
+
+<section class="hero-collections">
+  <div class="parallax parallax-cow-1" style="background-image: url({{ 'moo-parallax-one.svg' | asset_url }})" data-depth='.5'></div>
+  <div class="parallax parallax-cow-2" style="background-image: url({{ 'moo-parallax-two.svg' | asset_url }})" data-depth='.5'></div>
+  <div class="hero-collections__card-ctn">
+    <a href="/collections/denim" class="collection-card collection-card--denim">
+      <div class="collection-card-denim--bg"></div>
+      <div id="collection-card-denim" style="background-image: url({{ 'hero-denim-hover.png' | asset_img_url: 'Medium' }})"></div>
+      <h3>denim</h3>
+    </a>
+    <a href="/collections/beach" class="collection-card collection-card--beach">
+      <div class="collection-card-beach--bg"></div>
+      <div id="collection-card-beach" style="background-image: url({{ 'hero-beach-hover.png' | asset_img_url: 'Medium' }})"></div>
+      <h3>beach</h3>
+    </a>
+    <a href="/collections/back-to-work" class="collection-card collection-card--work">
+      <div class="collection-card-work--bg"></div>
+      <div id="collection-card-work" style="background-image: url({{ 'hero-work-hover.png' | asset_img_url: 'Medium' }})"></div>
+      <h3>back to work</h3>
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero collections",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Collections"
+    }
+  ]
+}
+{% endschema %}
