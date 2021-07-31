@@ -1,0 +1,50 @@
+<section class="collection-grid-ctn">
+  <div class="parallax parallax-cow-3" style="background-image: url({{ 'moo-parallax-one.svg' | asset_url }})" data-depth='1'></div>
+  <div class="parallax parallax-cow-4" style="background-image: url({{ 'moo-parallax-two.svg' | asset_url }})" data-depth='1'></div>
+  <h2 class="collection-grid__title">take a look around!</h2>
+  <div class="collection-grid__grid-ctn">
+    <a href="{{ collections['tops'].url }}" class="collection-grid__grid-item">
+      <div>
+        <img src="{{ collections['tops'].image | img_url: '500x' }}" />
+      </div>
+      <h3>{{ collections['tops'].title }}</h3>
+    </a>
+    <a href="{{ collections['bottoms'].url }}" class="collection-grid__grid-item">
+      <div>
+        <img src="{{ collections['bottoms'].image | img_url: '500x' }}" />
+      </div>
+      <h3>{{ collections['bottoms'].title }}</h3>
+    </a>
+    <a href="{{ collections['dresses'].url }}" class="collection-grid__grid-item">
+      <div>
+        <img src="{{ collections['dresses'].image | img_url: '500x' }}" />
+      </div>
+      <h3>{{ collections['dresses'].title }}</h3>
+    </a>
+    <a href="{{ collections['denim'].url }}" class="collection-grid__grid-item">
+      <div>
+        <img src="{{ collections['denim'].image | img_url: '500x' }}" />
+      </div>
+      <h3>{{ collections['denim'].title }}</h3>
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection grid"
+    }
+  ]
+}
+{% endschema %}

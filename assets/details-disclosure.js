@@ -3,12 +3,13 @@ class DetailsDisclosure extends HTMLElement {
     super();
     this.mainDetailsToggle = this.querySelector('details');
 
-    this.addEventListener('keyup', this.onKeyUp);
+    this.addEventListener('mouseenter', this.onMouseEnter);
+    this.addEventListener('mouseleave', this.onFocusOut.bind(this));
     this.mainDetailsToggle.addEventListener('focusout', this.onFocusOut.bind(this));
   }
 
-  onKeyUp(event) {
-    if(event.code.toUpperCase() !== 'ESCAPE') return;
+  onMouseEnter(event) {
+    this.mainDetailsToggle.setAttribute('open', "")
 
     const openDetailsElement = event.target.closest('details[open]');
     if (!openDetailsElement) return;
@@ -29,4 +30,4 @@ class DetailsDisclosure extends HTMLElement {
   }
 }
 
-customElements.define('details-disclosure', DetailsDisclosure);
+// customElements.define('details-disclosure', DetailsDisclosure);
