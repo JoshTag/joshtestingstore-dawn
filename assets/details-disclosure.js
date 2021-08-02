@@ -11,9 +11,6 @@ class DetailsDisclosure extends HTMLElement {
   onMouseEnter(event) {
     this.mainDetailsToggle.setAttribute('open', "")
 
-    const openDetailsElement = event.target.closest('details[open]');
-    if (!openDetailsElement) return;
-
     const summaryElement = openDetailsElement.querySelector('summary');
     openDetailsElement.removeAttribute('open');
     summaryElement.focus();
@@ -30,4 +27,4 @@ class DetailsDisclosure extends HTMLElement {
   }
 }
 
-// customElements.define('details-disclosure', DetailsDisclosure);
+customElements.define('details-disclosure', DetailsDisclosure);

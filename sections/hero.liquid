@@ -1,21 +1,17 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
 <section>
   <div class="header-container">
-    <h1><img src="{{ 'hero-image.svg' | asset_url }}" /></h1>
-    <h2>vintage & thrift</h2>
+    <h1>
+      <img src="{{ 'hero-image.svg' | asset_url }}" />
+      <span>vintage & thrift</span>
+    </h1>
   </div>
 </section>
 
 {% schema %}
 {
   "name": "Hero",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "default": true,
-      "label": "t:sections.rich-text.settings.full_width.label"
-    }
-  ],
   "presets": [
     {
       "name": "Hero"

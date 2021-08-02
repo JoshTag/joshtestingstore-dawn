@@ -322,14 +322,13 @@
                 </details-disclosure>
               {%- elsif link.title == 'Shop' -%}
                 <details-disclosure>
-                  <details open>
+                  <details>
                     <summary class="header__menu-item list-menu__item link focus-inset">
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                      {% render 'icon-caret' %}
                     </summary>
                     <ul class="header__submenu header__submenu--poisition list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1">
                       <li>
-                        <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                        <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if link.current %} list-menu__item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                           {{ link.title | escape }}
                         </a>
                       </li>

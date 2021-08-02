@@ -10,8 +10,10 @@
           <img style="width: 120%; max-width: unset" src="{{ all_products['plaid-blazer'].images[0].src | img_url: "Medium" }}" />
         </div>
         <p>{{ all_products['plaid-blazer'].title }}</p>
-        <span>{{ all_products['plaid-blazer'].price | money }}</span>
-        <span>{{ all_products['plaid-blazer'].compare_at_price | money }}</span>
+        <div>
+          <span>{{ all_products['plaid-blazer'].price | money }}</span>
+          <span>{{ all_products['plaid-blazer'].compare_at_price | money }}</span>
+        </div>
       </a>
     </div>
     <div class="weekly-picks__item">

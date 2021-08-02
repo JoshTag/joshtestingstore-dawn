@@ -1,3 +1,5 @@
+{{ 'section-hero-collection.css' | asset_url | stylesheet_tag }}
+
 {% style %}
 .collection-card-denim--bg,
 .collection-card-beach--bg,
@@ -50,7 +52,12 @@
   <div class="parallax parallax-cow-1" style="background-image: url({{ 'moo-parallax-one.svg' | asset_url }})" data-depth='.5'></div>
   <div class="parallax parallax-cow-2" style="background-image: url({{ 'moo-parallax-two.svg' | asset_url }})" data-depth='.5'></div>
   <div class="hero-collections__card-ctn">
-    <a href="/collections/denim" class="collection-card collection-card--denim">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.collection.url }}" class="collection-card">
+        <h3>{{ block.settings.collection.title | downcase }}</h3>
+      </a>
+    {% endfor %}
+    <!-- <a href="/collections/denim" class="collection-card collection-card--denim">
       <div class="collection-card-denim--bg"></div>
       <div id="collection-card-denim" style="background-image: url({{ 'hero-denim-hover.png' | asset_img_url: 'Medium' }})"></div>
       <h3>denim</h3>
@@ -64,19 +71,25 @@
       <div class="collection-card-work--bg"></div>
       <div id="collection-card-work" style="background-image: url({{ 'hero-work-hover.png' | asset_img_url: 'Medium' }})"></div>
       <h3>back to work</h3>
-    </a>
+    </a> -->
   </div>
 </section>
 
 {% schema %}
 {
   "name": "Hero collections",
-  "settings": [
+  "blocks": [
     {
-      "type": "checkbox",
-      "id": "full_width",
-      "default": true,
-      "label": "t:sections.rich-text.settings.full_width.label"
+      "type": "collection",
+      "limit": 3,
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "collection"
+        }
+      ]
     }
   ],
   "presets": [

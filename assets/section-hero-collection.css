@@ -1,0 +1,142 @@
+/* hero-collections */
+
+.hero-collections {
+  margin: 80px 0 100px;
+}
+
+.hero-collections > .hero-collections__card-ctn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero-collections > .hero-collections__card-ctn {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-collections > .hero-collections__card-ctn {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-collections > .hero-collections__card-ctn {
+    width: 1050px;
+  }
+}
+
+.hero-collections > div > .collection-card {
+  position: relative;
+  height: 240px;
+  width: 310px;
+  margin: 40px auto;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .hero-collections > div > .collection-card {
+    height: 200px;
+    width: 240px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero-collections > div > .collection-card {
+    height: 230px;
+    width: 290px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-collections > div > .collection-card {
+      height: 270px;
+      width: 330px;
+  }
+}
+
+.collection-card {
+  position: relative;
+  border: 3px solid black;
+  border-radius: 7px;
+  background-color: #E8EFFA;
+}
+
+.collection-card > div:nth-of-type(2) {
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-collections > div > a > h3 {
+  font-size: 31px;
+  font-weight: 400;
+  text-align: right;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.collection-card--denim:hover > h3,
+.collection-card--beach:hover > h3,
+.collection-card--work:hover > h3 {
+  opacity: 0;
+  transition: none;
+}
+
+.collection-card--denim > #collection-card-denim,
+.collection-card--beach > #collection-card-beach,
+.collection-card--work > #collection-card-work {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.collection-card--denim:hover > #collection-card-denim,
+.collection-card--beach:hover > #collection-card-beach,
+.collection-card--work:hover > #collection-card-work {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-collections__cow-print {
+  position: absolute;
+  z-index: 1000;
+}
+
+.hero-collections__cow-print:nth-of-type(1) {
+  top: 95px;
+  left: -280px;
+  width: 350px;
+}
+@media screen and (min-width: 1024px) {
+  .hero-collections__cow-print:nth-of-type(1) {
+    top: 95px;
+    left: -280px;
+    width: 350px;
+    transform: translateZ(.25px) scale(2);
+  }
+}
+
+.hero-collections__cow-print:nth-of-type(2) {
+  top: 95px;
+  right: -240px;
+  width: 350px;
+}
+@media screen and (min-width: 1024px) {
+  .hero-collections__cow-print:nth-of-type(2) {
+    top: 95px;
+    left: -280px;
+    width: 350px;
+  }
+}
