@@ -1,60 +1,95 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "1628710738caf9827d": {
+      "type": "hero",
       "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_label_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ]
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products"
       }
     },
-    "image_text": {
-      "type": "image-with-text",
+    "162871084828399e05": {
+      "type": "hero-collections",
       "blocks": {
-        "heading": {
-          "type": "heading"
+        "8b2b0755-f8ad-4858-ba48-8bc8cd620da6": {
+          "type": "collection",
+          "settings": {
+            "collection": "denim",
+            "image_bg": "shopify:\/\/shop_images\/hero-denim.png",
+            "image_hover": "shopify:\/\/shop_images\/hero-denim-hover.png"
+          }
         },
-        "text": {
-          "type": "text"
+        "416af509-3d4c-4b50-b321-9f5138bf26db": {
+          "type": "collection",
+          "settings": {
+            "collection": "beach",
+            "image_bg": "shopify:\/\/shop_images\/hero-beach.png",
+            "image_hover": "shopify:\/\/shop_images\/beach-looks.png"
+          }
         },
-        "button": {
-          "type": "button"
+        "175344b9-3017-4d4c-b4c5-83e45909b37c": {
+          "type": "collection",
+          "settings": {
+            "collection": "back-to-work",
+            "image_bg": "shopify:\/\/shop_images\/hero-work.png",
+            "image_hover": "shopify:\/\/shop_images\/hero-work-hover.png"
+          }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
+        "8b2b0755-f8ad-4858-ba48-8bc8cd620da6",
+        "416af509-3d4c-4b50-b321-9f5138bf26db",
+        "175344b9-3017-4d4c-b4c5-83e45909b37c"
+      ],
+      "settings": {
+      }
+    },
+    "1628711371077e197e": {
+      "type": "weekly-picks",
+      "settings": {
+        "collection": "weekly-picks"
+      }
+    },
+    "1628711398b0f85119": {
+      "type": "collection-grid",
+      "blocks": {
+        "defd4155-3eeb-430e-835a-74aa2a8d9ff5": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops"
+          }
+        },
+        "e61b1579-7d62-48a3-b1d9-83e5ae1948d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "bottoms"
+          }
+        },
+        "3d65fd8f-d791-4701-98ba-28af5efbef7c": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses"
+          }
+        },
+        "ac27468e-603a-4649-94cc-f8c1c82c6c03": {
+          "type": "collection",
+          "settings": {
+            "collection": "denim"
+          }
+        }
+      },
+      "block_order": [
+        "defd4155-3eeb-430e-835a-74aa2a8d9ff5",
+        "e61b1579-7d62-48a3-b1d9-83e5ae1948d3",
+        "3d65fd8f-d791-4701-98ba-28af5efbef7c",
+        "ac27468e-603a-4649-94cc-f8c1c82c6c03"
+      ],
+      "settings": {
+        "header": "take a look around!"
+      }
     }
   },
   "order": [
-    "image_banner",
-    "featured_products",
-    "image_text"
+    "1628710738caf9827d",
+    "162871084828399e05",
+    "1628711371077e197e",
+    "1628711398b0f85119"
   ]
 }

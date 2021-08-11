@@ -32,7 +32,7 @@
             </span>
           </div>
           <div class="weekly-picks__img-wrapper">
-            <img src="{{ product.images[0].src | img_url: "Medium" }}" />
+            <img src="{{ product.images[0].src | img_url: "Medium" }}" loading="lazy"/>
           </div>
           <p class="weekly-picks__product-title">{{ product.title }}</p>
           <div class="weekly-picks__price">

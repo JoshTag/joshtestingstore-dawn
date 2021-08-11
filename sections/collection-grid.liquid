@@ -3,12 +3,12 @@
 <section class="collection-grid-ctn">
   <div class="parallax parallax-cow-3" style="background-image: url({{ 'moo-parallax-one.svg' | asset_url }})" data-depth='1'></div>
   <div class="parallax parallax-cow-4" style="background-image: url({{ 'moo-parallax-two.svg' | asset_url }})" data-depth='1'></div>
-  <h2 class="collection-grid__title">{{ section.settings.header  }}</h2>
+  <h2 class="collection-grid__title">{{ section.settings.header }}</h2>
   <div class="collection-grid__grid-ctn">
     {% for block in section.blocks %}
       <a href="{{ block.settings.collection.url }}" class="collection-grid__grid-item">
         <div class="collection-grid__img-ctn">
-          <img src="{{ block.settings.collection.image | img_url: '500x' }}" />
+          <img  src="{{ block.settings.collection.image | img_url: '500x' }}" loading="lazy"/>
         </div>
         <h3 class="collection-grid__grid-title">{{ block.settings.collection.title }}</h3>
       </a>
