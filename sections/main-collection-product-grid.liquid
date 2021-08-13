@@ -159,6 +159,26 @@
             <noscript>
               <button type="submit" class="facets__button button">{{ 'sections.collection_template.filter_button' | t }}</button>
             </noscript>
+
+            <div class="collection-filters__item sorting">
+              <div class="collection-filters__field">
+                <label class="collection-filters__label" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
+                <div class="select" style="width: unset">
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <select name="sort_by" class="select__select collection-filters__sort" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                    {%- for option in collection.sort_options -%}
+                      <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+
+              <noscript>
+                <button type="submit" class="button button--small">{{ 'sections.collection_template.sort_button' | t }}</button>
+              </noscript>
+            </div>
+
           </div>
 
           <div class="active-facets active-facets-desktop">
@@ -199,25 +219,11 @@
         {% endif %}
 
         {%- if section.settings.enable_sorting -%}
-          <div class="collection-filters__item sorting">
-            <div class="collection-filters__field">
-              <label class="collection-filters__label" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
-              <div class="select">
-                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                <select name="sort_by" class="select__select collection-filters__sort" id="SortBy" aria-describedby="a11y-refresh-page-message">
-                  {%- for option in collection.sort_options -%}
-                    <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-            </div>
-
-            <noscript>
-              <button type="submit" class="button button--small">{{ 'sections.collection_template.sort_button' | t }}</button>
-            </noscript>
-          </div>
+          <p class="product-count">
+            {{ collection.all_products_count }} Products
+          </p>
         {%- endif -%}
+
       </form>
     </collection-filters-form>
     <menu-drawer class="mobile-facets__wrapper" data-breakpoint="mobile">

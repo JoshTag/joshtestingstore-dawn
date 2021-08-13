@@ -97,6 +97,18 @@
 .collection-filters {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.collection-filters:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(var(--color-foreground));
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 20px;
+  z-index: -1;
 }
 
 @media screen and (min-width: 750px) {
@@ -114,9 +126,11 @@
   display: block;
   color: var(--color-foreground-85);
   font-size: 1.4rem;
-  line-height: 1;
-  margin: 0 0 1rem;
-  width: 100%;
+  line-height: 3;
+  margin: 0 0 0 5rem;
+  padding: 0 1rem;
+  width: 80px;
+  background: rgba(var(--color-background));
 }
 
 .collection-filters__summary {
@@ -143,7 +157,7 @@
 }
 
 .collection-filters__field {
-  flex-grow: 1;
+  display: flex;
 }
 
 .collection-filters__item button {
@@ -187,7 +201,7 @@
 }
 
 .js .facets__form {
-  grid-template-columns: calc(100% - 27rem) 25rem;
+  grid-template-columns: calc(100% - 13rem) 11rem;
 }
 
 .facets__wrapper {
@@ -202,9 +216,10 @@
   display: block;
   color: rgba(var(--color-foreground), 0.85);
   font-size: 1.4rem;
-  line-height: 1;
-  margin: 0 0 1rem 0.5rem;
-  width: 100%;
+  line-height: 3;
+  margin: 0;
+  padding-left: 0.5rem;
+  background: rgb(var(--color-background));
 }
 
 .facets__reset {
@@ -212,13 +227,9 @@
 }
 
 .facets__disclosure {
-  border: 1px solid rgba(var(--color-foreground), 0.55);
-  margin: 0 0 0.5rem 0.5rem;
+  padding: 0 0 0 1rem;
   transition: box-shadow var(--duration-short) ease;
-}
-
-.facets__disclosure:hover {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55);
+  background: rgb(var(--color-background));
 }
 
 .facets__summary {
@@ -801,4 +812,22 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__sort .select__select {
   box-shadow: none;
+}
+
+.collection-grid-section {
+  margin-top: 10rem;
+}
+
+.collection-filters__sort {
+  box-shadow: 0 0 0 0;
+  background: rgb(var(--color-background));
+}
+
+.product-count {
+  margin: 0;
+  line-height: 3;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(var(--color-foreground), 0.5);
+  background: rgb(var(--color-background));
 }
