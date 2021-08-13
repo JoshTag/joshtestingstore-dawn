@@ -163,7 +163,7 @@
             <div class="collection-filters__item sorting">
               <div class="collection-filters__field">
                 <label class="collection-filters__label" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
-                <div class="select" style="width: unset">
+                <div class="select sorting-select">
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                   <select name="sort_by" class="select__select collection-filters__sort" id="SortBy" aria-describedby="a11y-refresh-page-message">
                     {%- for option in collection.sort_options -%}
@@ -477,7 +477,7 @@
         <ul id="main-collection-product-grid" data-id="{{ section.id }}" class="
           grid grid--2-col
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
-            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
+            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--3-col-desktop grid--quarter-max{% endif %}
           {% endif %} negative-margin">
           {%- for product in collection.products -%}
             <li class="grid__item">

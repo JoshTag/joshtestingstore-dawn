@@ -52,7 +52,6 @@
 }
 
 .card--product {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.04);
   position: relative;
 }
 

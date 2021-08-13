@@ -26,7 +26,7 @@
 
 @media screen and (min-width: 750px) {
   .collection-product-count {
-    margin-top: 1.5rem;
+    display: none;
   }
 }
 
@@ -100,15 +100,17 @@
   position: relative;
 }
 
-.collection-filters:before {
-  content: "";
-  position: absolute;
-  background-color: rgba(var(--color-foreground));
-  width: 100%;
-  height: 2px;
-  left: 0;
-  top: 20px;
-  z-index: -1;
+@media screen and (min-width: 750px) {
+  .collection-filters:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(var(--color-foreground));
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 20px;
+    z-index: -1;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -830,4 +832,8 @@ input.mobile-facets__checkbox {
   text-align: center;
   color: rgba(var(--color-foreground), 0.5);
   background: rgb(var(--color-background));
+}
+
+.sorting-select {
+  width: 140px;
 }
