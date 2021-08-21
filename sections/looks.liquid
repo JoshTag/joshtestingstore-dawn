@@ -1,0 +1,192 @@
+{{ 'section-looks.css' | asset_url | stylesheet_tag }}
+
+{% if request.path == '/collections/denim' %}
+  <div class="look-card">
+    <h2 class="look-card__title">shop the look</h2>
+    <div class="look-card__card">
+      <img class="look-card__cow-print" src="{{ 'cow-look-black.svg' | asset_url }}"/>
+      <img class="look-card__cow-print" src="{{ 'cow-look-blue.svg' | asset_url }}"/>
+      <div class="look-card__card-content" style="background-image: url({{ 'denim-look-bg.png' | asset_img_url: '900x' }})">
+        <div class="look-card__card-img">
+          <img src="{{ 'denim-looks.png' | asset_img_url: "700x" }}" />
+        </div>
+        <div class="look-card__card-list">
+          <ul class="look-card__list">
+            <li class="look-card__list-item">
+              <a href="{{ all_products["cropped-blazer"].url }}"class="look-card__card-link">
+                <span>
+                  {{ all_products["cropped-blazer"].title }}
+                </span>
+                <span>
+                  {{ all_products["cropped-blazer"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["cropped-blazer"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["20s-pattern-top"].title }}
+                </span>
+                <span>
+                  {{ all_products["20s-pattern-top"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["swedish-hasbeens-platform-boots"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["swedish-hasbeens-platform-boots"].title }}
+                </span>
+                <span>
+                  {{ all_products["swedish-hasbeens-platform-boots"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["bleach-splattered-levis"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["bleach-splattered-levis"].title }}
+                </span>
+                <span>
+                  {{ all_products["bleach-splattered-levis"].price | money }}
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% elsif request.path == '/collections/beach' %}
+  <div class="look-card">
+    <h2 class="look-card__title">shop the look</h2>
+    <div class="look-card__card">
+      <img class="look-card__cow-print" src="{{ 'cow-look-black.svg' | asset_url }}"/>
+      <img class="look-card__cow-print" src="{{ 'cow-look-blue.svg' | asset_url }}"/>
+      <div class="look-card__card-content" style="background-image: url({{ 'beach-look-bg.png' | asset_img_url: '900x' }})">
+        <div class="look-card__card-img beach-look-image">
+          <img src="{{ 'beach-looks.png' | asset_img_url: "700x" }}" />
+        </div>
+        <div class="look-card__card-list">
+          <ul class="look-card__list">
+            <li class="look-card__list-item">
+              <a href="{{ all_products["american-apparel-knit-polo"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["american-apparel-knit-polo"].title }}
+                </span>
+                <span>
+                  {{ all_products["american-apparel-knit-polo"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["tna-denim-skirt"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["tna-denim-skirt"].title }}
+                </span>
+                <span>
+                  {{ all_products["tna-denim-skirt"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["red-sun-hat"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["red-sun-hat"].title }}
+                </span>
+                <span>
+                  {{ all_products["red-sun-hat"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["black-leather-sandal"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["black-leather-sandal"].title }}
+                </span>
+                <span>
+                  {{ all_products["black-leather-sandal"].price | money }}
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% elsif request.path == '/collections/back-to-work' %}
+  <div class="look-card">
+    <h2 class="look-card__title">shop the look</h2>
+    <div class="look-card__card">
+      <img class="look-card__cow-print" src="{{ 'cow-look-black.svg' | asset_url }}"/>
+      <img class="look-card__cow-print" src="{{ 'cow-look-blue.svg' | asset_url }}"/>
+      <div class="look-card__card-content" style="background-image: url({{ 'work-look-bg.png' | asset_img_url: '900x' }})">
+        <div class="look-card__card-img work-look-image">
+          <img src="{{ 'work-look.png' | asset_img_url: "700x" }}" />
+        </div>
+        <div class="look-card__card-list">
+          <ul class="look-card__list">
+            <li class="look-card__list-item">
+              <a href="{{ all_products["plaid-blazer"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["plaid-blazer"].title }}
+                </span>
+                <span>
+                  {{ all_products["plaid-blazer"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["black-party-dress"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["black-party-dress"].title }}
+                </span>
+                <span>
+                  {{ all_products["black-party-dress"].price | money }}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["summer-scarf"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["summer-scarf"].title }}
+                </span>
+                <span>
+                  {{ all_products["summer-scarf"].price | money}}
+                </span>
+              </a>
+            </li>
+            <li class="look-card__list-item">
+              <a href="{{ all_products["swedish-hasbeens-platform-boots"].url }}" class="look-card__card-link">
+                <span>
+                  {{ all_products["swedish-hasbeens-platform-boots"].title }}
+                </span>
+                <span>
+                  {{ all_products["swedish-hasbeens-platform-boots"].price | money }}
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Looks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "presets": [
+  {
+    "name": "Looks"
+  }
+]
+}
+{% endschema %}

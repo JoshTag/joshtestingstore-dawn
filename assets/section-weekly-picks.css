@@ -89,27 +89,4 @@
   text-decoration: line-through;
 }
 
-.weekly-picks__bubble {
-  position: absolute;
-  top: 27px;
-  right: 32px;
-  height: 95px;
-  width: 90px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-align: center;
-}
-
-.weekly-picks__bubble > span {
-  font-size: 15px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.bubble--sale > span,
-.bubble--fave > span {
-  color: #fff;
-}
 

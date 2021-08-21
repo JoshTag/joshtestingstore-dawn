@@ -2232,6 +2232,8 @@ details-disclosure > details {
   margin-left: 40px;
   position: relative;
   top: -20px;
+  color:rgba(var(--color-foreground));
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -2240,4 +2242,32 @@ details-disclosure > details {
     font-size: 28px;
     top: -25px;
   }
+}
+
+.product-bubble {
+  position: absolute;
+  top: 27px;
+  right: 32px;
+  height: 95px;
+  width: 90px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+
+.product-bubble > span {
+  font-size: 15px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.bubble--sale > span,
+.bubble--fave > span {
+  color: #fff;
+}
+
+.card__inner {
+  position: relative;
 }

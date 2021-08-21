@@ -1,26 +1,12 @@
 {{ 'section-weekly-picks.css' | asset_url | stylesheet_tag }}
 
-{% style %}
-.bubble--sale {
-  background-image: url({{ 'sale.svg' | asset_url }})
-}
-
-.bubble--new {
-  background-image: url({{ 'new.svg' | asset_url }})
-}
-
-.bubble--fave {
-  background-image: url({{ 'fave.svg' | asset_url }})
-}
-{% endstyle %}
-
 <section class="weekly-picks">
   <h2 class="weekly-picks__header">picks of the week</h2>
   <div class="weekly-picks__product-ctn">
     {% for product in section.settings.collection.products %}
       <div class="weekly-picks__item">
         <a href="{{ product.url }}" class="weekly-picks__item-link">
-          <div class="weekly-picks__bubble bubble--{% if product.tags contains "New" %}new{% elsif product.tags contains "Fave" %}fave{% elsif product.compare_at_price != blank %}sale{% endif %}">
+          <div class="product-bubble bubble--{% if product.tags contains "New" %}new{% elsif product.tags contains "Fave" %}fave{% elsif product.compare_at_price != blank %}sale{% endif %}">
             <span>
               {% if product.tags contains "New" %}
                 new

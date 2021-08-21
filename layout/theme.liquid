@@ -90,6 +90,18 @@
           font-size: 1.6rem;
         }
       }
+
+      .bubble--sale {
+        background-image: url({{ 'sale.svg' | asset_url }})
+      }
+
+      .bubble--new {
+        background-image: url({{ 'new.svg' | asset_url }})
+      }
+
+      .bubble--fave {
+        background-image: url({{ 'fave.svg' | asset_url }})
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
